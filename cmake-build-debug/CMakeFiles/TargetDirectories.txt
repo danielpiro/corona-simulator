@@ -1,0 +1,3 @@
+C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/spl_assignment.dir
+C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
