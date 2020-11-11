@@ -26,12 +26,7 @@ Session::Session(const std::string &path) : g() {
 }
 
 void Session::simulate() {
-    for (int i = 0; i < g.get_edges().size(); ++i) {
-        for (int j = 0; j < g.get_edges()[i].size(); ++j) {
-            cout<<g.get_edges()[i][j];
-        }
-        cout<<"\n";
-    }
+   
 }
 
 void Session::addAgent(const Agent &agent) {
