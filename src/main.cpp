@@ -9,6 +9,7 @@ int main(int argc, char **argv) {
         return 0;
     }
     Session sess(argv[1]);
+    cout<<"check";
     sess.simulate();
     return 0;
 }
