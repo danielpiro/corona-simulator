@@ -63,10 +63,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\daniel\Downloads\spl_assignment
+CMAKE_SOURCE_DIR = C:\Users\daniel\Desktop\Projects\corona-simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/spl_assignment.dir/clean
 CMakeFiles/spl_assignment.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\spl_assignment.dir\build.make CMakeFiles/spl_assignment.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\spl_assignment.dir\build.make CMakeFiles/spl_assignment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target spl_assignment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target spl_assignment"
 .PHONY : CMakeFiles/spl_assignment.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/spl_assignment.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/spl_assignment.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/spl_assignment.dir/rule
 
 # Convenience name for target.

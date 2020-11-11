@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/daniel/Downloads/spl_assignment/src/Agent.cpp" "C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj"
-  "C:/Users/daniel/Downloads/spl_assignment/src/Graph.cpp" "C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj"
-  "C:/Users/daniel/Downloads/spl_assignment/src/Session.cpp" "C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Session.cpp.obj"
-  "C:/Users/daniel/Downloads/spl_assignment/src/Tree.cpp" "C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj"
-  "C:/Users/daniel/Downloads/spl_assignment/src/main.cpp" "C:/Users/daniel/Downloads/spl_assignment/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/main.cpp.obj"
+  "C:/Users/daniel/Desktop/Projects/corona-simulator/src/Agent.cpp" "C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj"
+  "C:/Users/daniel/Desktop/Projects/corona-simulator/src/Graph.cpp" "C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj"
+  "C:/Users/daniel/Desktop/Projects/corona-simulator/src/Session.cpp" "C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Session.cpp.obj"
+  "C:/Users/daniel/Desktop/Projects/corona-simulator/src/Tree.cpp" "C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj"
+  "C:/Users/daniel/Desktop/Projects/corona-simulator/src/main.cpp" "C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/CMakeFiles/spl_assignment.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

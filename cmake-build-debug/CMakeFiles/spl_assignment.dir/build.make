@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\daniel\Downloads\spl_assignment
+CMAKE_SOURCE_DIR = C:\Users\daniel\Desktop\Projects\corona-simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/spl_assignment.dir/depend.make
@@ -79,72 +79,72 @@ include CMakeFiles/spl_assignment.dir/flags.make
 CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj: CMakeFiles/spl_assignment.dir/flags.make
 CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj: CMakeFiles/spl_assignment.dir/includes_CXX.rsp
 CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj: ../src/Agent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Agent.cpp.obj -c C:\Users\daniel\Downloads\spl_assignment\src\Agent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spl_assignment.dir/src/Agent.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Agent.cpp.obj -c C:\Users\daniel\Desktop\Projects\corona-simulator\src\Agent.cpp
 
 CMakeFiles/spl_assignment.dir/src/Agent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spl_assignment.dir/src/Agent.cpp.i"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Downloads\spl_assignment\src\Agent.cpp > CMakeFiles\spl_assignment.dir\src\Agent.cpp.i
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Desktop\Projects\corona-simulator\src\Agent.cpp > CMakeFiles\spl_assignment.dir\src\Agent.cpp.i
 
 CMakeFiles/spl_assignment.dir/src/Agent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spl_assignment.dir/src/Agent.cpp.s"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Downloads\spl_assignment\src\Agent.cpp -o CMakeFiles\spl_assignment.dir\src\Agent.cpp.s
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Desktop\Projects\corona-simulator\src\Agent.cpp -o CMakeFiles\spl_assignment.dir\src\Agent.cpp.s
 
 CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj: CMakeFiles/spl_assignment.dir/flags.make
 CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj: CMakeFiles/spl_assignment.dir/includes_CXX.rsp
 CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj: ../src/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Graph.cpp.obj -c C:\Users\daniel\Downloads\spl_assignment\src\Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/spl_assignment.dir/src/Graph.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Graph.cpp.obj -c C:\Users\daniel\Desktop\Projects\corona-simulator\src\Graph.cpp
 
 CMakeFiles/spl_assignment.dir/src/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spl_assignment.dir/src/Graph.cpp.i"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Downloads\spl_assignment\src\Graph.cpp > CMakeFiles\spl_assignment.dir\src\Graph.cpp.i
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Desktop\Projects\corona-simulator\src\Graph.cpp > CMakeFiles\spl_assignment.dir\src\Graph.cpp.i
 
 CMakeFiles/spl_assignment.dir/src/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spl_assignment.dir/src/Graph.cpp.s"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Downloads\spl_assignment\src\Graph.cpp -o CMakeFiles\spl_assignment.dir\src\Graph.cpp.s
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Desktop\Projects\corona-simulator\src\Graph.cpp -o CMakeFiles\spl_assignment.dir\src\Graph.cpp.s
 
 CMakeFiles/spl_assignment.dir/src/main.cpp.obj: CMakeFiles/spl_assignment.dir/flags.make
 CMakeFiles/spl_assignment.dir/src/main.cpp.obj: CMakeFiles/spl_assignment.dir/includes_CXX.rsp
 CMakeFiles/spl_assignment.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/spl_assignment.dir/src/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\main.cpp.obj -c C:\Users\daniel\Downloads\spl_assignment\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/spl_assignment.dir/src/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\main.cpp.obj -c C:\Users\daniel\Desktop\Projects\corona-simulator\src\main.cpp
 
 CMakeFiles/spl_assignment.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spl_assignment.dir/src/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Downloads\spl_assignment\src\main.cpp > CMakeFiles\spl_assignment.dir\src\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Desktop\Projects\corona-simulator\src\main.cpp > CMakeFiles\spl_assignment.dir\src\main.cpp.i
 
 CMakeFiles/spl_assignment.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spl_assignment.dir/src/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Downloads\spl_assignment\src\main.cpp -o CMakeFiles\spl_assignment.dir\src\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Desktop\Projects\corona-simulator\src\main.cpp -o CMakeFiles\spl_assignment.dir\src\main.cpp.s
 
 CMakeFiles/spl_assignment.dir/src/Session.cpp.obj: CMakeFiles/spl_assignment.dir/flags.make
 CMakeFiles/spl_assignment.dir/src/Session.cpp.obj: CMakeFiles/spl_assignment.dir/includes_CXX.rsp
 CMakeFiles/spl_assignment.dir/src/Session.cpp.obj: ../src/Session.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/spl_assignment.dir/src/Session.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Session.cpp.obj -c C:\Users\daniel\Downloads\spl_assignment\src\Session.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/spl_assignment.dir/src/Session.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Session.cpp.obj -c C:\Users\daniel\Desktop\Projects\corona-simulator\src\Session.cpp
 
 CMakeFiles/spl_assignment.dir/src/Session.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spl_assignment.dir/src/Session.cpp.i"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Downloads\spl_assignment\src\Session.cpp > CMakeFiles\spl_assignment.dir\src\Session.cpp.i
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Desktop\Projects\corona-simulator\src\Session.cpp > CMakeFiles\spl_assignment.dir\src\Session.cpp.i
 
 CMakeFiles/spl_assignment.dir/src/Session.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spl_assignment.dir/src/Session.cpp.s"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Downloads\spl_assignment\src\Session.cpp -o CMakeFiles\spl_assignment.dir\src\Session.cpp.s
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Desktop\Projects\corona-simulator\src\Session.cpp -o CMakeFiles\spl_assignment.dir\src\Session.cpp.s
 
 CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj: CMakeFiles/spl_assignment.dir/flags.make
 CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj: CMakeFiles/spl_assignment.dir/includes_CXX.rsp
 CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj: ../src/Tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Tree.cpp.obj -c C:\Users\daniel\Downloads\spl_assignment\src\Tree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\spl_assignment.dir\src\Tree.cpp.obj -c C:\Users\daniel\Desktop\Projects\corona-simulator\src\Tree.cpp
 
 CMakeFiles/spl_assignment.dir/src/Tree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spl_assignment.dir/src/Tree.cpp.i"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Downloads\spl_assignment\src\Tree.cpp > CMakeFiles\spl_assignment.dir\src\Tree.cpp.i
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\daniel\Desktop\Projects\corona-simulator\src\Tree.cpp > CMakeFiles\spl_assignment.dir\src\Tree.cpp.i
 
 CMakeFiles/spl_assignment.dir/src/Tree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spl_assignment.dir/src/Tree.cpp.s"
-	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Downloads\spl_assignment\src\Tree.cpp -o CMakeFiles\spl_assignment.dir\src\Tree.cpp.s
+	C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\daniel\Desktop\Projects\corona-simulator\src\Tree.cpp -o CMakeFiles\spl_assignment.dir\src\Tree.cpp.s
 
 # Object files for target spl_assignment
 spl_assignment_OBJECTS = \
@@ -166,7 +166,7 @@ spl_assignment.exe: CMakeFiles/spl_assignment.dir/build.make
 spl_assignment.exe: CMakeFiles/spl_assignment.dir/linklibs.rsp
 spl_assignment.exe: CMakeFiles/spl_assignment.dir/objects1.rsp
 spl_assignment.exe: CMakeFiles/spl_assignment.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable spl_assignment.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable spl_assignment.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\spl_assignment.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -179,6 +179,6 @@ CMakeFiles/spl_assignment.dir/clean:
 .PHONY : CMakeFiles/spl_assignment.dir/clean
 
 CMakeFiles/spl_assignment.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\daniel\Downloads\spl_assignment C:\Users\daniel\Downloads\spl_assignment C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug C:\Users\daniel\Downloads\spl_assignment\cmake-build-debug\CMakeFiles\spl_assignment.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\daniel\Desktop\Projects\corona-simulator C:\Users\daniel\Desktop\Projects\corona-simulator C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug C:\Users\daniel\Desktop\Projects\corona-simulator\cmake-build-debug\CMakeFiles\spl_assignment.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/spl_assignment.dir/depend
 

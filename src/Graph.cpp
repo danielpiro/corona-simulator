@@ -37,7 +37,7 @@ std::vector<std::vector<int>> Graph::get_edges() const {
 }
 
 void Graph::remove_edges(int node) {
-    for (int i = 0; i < edges[node].size(); ++i)
+    for (unsigned int i = 0; i < edges[node].size(); ++i)
         if (edges[node][i] == 1) {
             edges[node][i] = 0;
             edges[i][node] = 0;

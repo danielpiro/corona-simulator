@@ -2,7 +2,7 @@
 #include "../include/json.hpp"
 #include <iostream>
 #include <fstream>
-
+#include <string>
 
 using namespace std;
 using json = nlohmann::json;
@@ -20,15 +20,18 @@ Session::Session(const std::string &path) : g() {
             addAgent(*agent);
         }
     }
-    treeType = Json["tree"][0];
-    setTreeType(treeType); //parser tree
-    setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
+   setTreeType(Json["tree"].get<string>().front()); //parser tree
+   setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
     queue = agents;
 }
 
 void Session::simulate() {
-    
-
+    for (int i = 0; i < g.get_edges().size(); ++i) {
+        for (int j = 0; j < g.get_edges()[i].size(); ++j) {
+            cout<<g.get_edges()[i][j];
+        }
+        cout<<"\n";
+    }
 }
 
 void Session::addAgent(const Agent &agent) {
@@ -54,8 +57,13 @@ int Session::dequeueInfected() {
     return temp;
 }
 
-TreeType Session::getTreeType() const {
-    return treeType;
+TreeType Session::getTreeType() const { //problem with getting treetype we get the index of the enum list
+    if (treeType == 0)
+        return Cycle;
+    else if(treeType == 1)
+        return MaxRank;
+    else
+        return Root;
 }
 
 void Session::setTreeType(char tree) {
