@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\spl_assignment.dir/objects.a
-C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\ar.exe cr CMakeFiles\spl_assignment.dir/objects.a @CMakeFiles\spl_assignment.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\mingw64\mingw64\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\spl_assignment.dir/objects.a -Wl,--no-whole-archive  -o spl_assignment.exe -Wl,--out-implib,libspl_assignment.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\spl_assignment.dir\linklibs.rsp

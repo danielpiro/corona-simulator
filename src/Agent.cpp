@@ -21,8 +21,10 @@ void Virus::act(Session &session) {
         }
     tmp->Clear();
 }
+
 Agent *Virus::clone() const {
     return new Virus(*this);
+    cout<<"hello";
 }
 
 int Virus::getNode() const {
