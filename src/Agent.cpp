@@ -11,7 +11,7 @@ Virus::Virus(const int nodeInd) : nodeInd(nodeInd) {
 void Virus::act(Session &session) {
     Graph *tmp = session.getGraphRef().clone();
 
-    for (unsigned int i = 0; i < tmp->get_edges()[nodeInd].size();)
+    for (unsigned int i = 0; i < tmp->get_edges()[nodeInd].size();i++)
         if (tmp->get_edges()[nodeInd][i] == 1) {
             if (!tmp->isInfected(tmp->get_edges()[nodeInd][i])) {
                 session.getGraphRef().infectNode((int)i);
