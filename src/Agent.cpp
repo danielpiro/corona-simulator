@@ -49,6 +49,7 @@ void ContactTracer::act(Session &session) {
         }
     }
 }
+//liel
 
 ContactTracer::ContactTracer(int noteInd) : nodeInd(noteInd) {
 }
