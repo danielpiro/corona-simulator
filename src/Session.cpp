@@ -22,12 +22,21 @@ Session::Session(const std::string &path) : g() {
     }
    setTreeType(Json["tree"].get<string>().front()); //parser tree
    setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
-    queue = agents;
 }
 
 void Session::simulate() {
-   
+   int size = agents.size();
+   for (int i = 0; i < size ; i++) {
+       if (size <= agents.size()){
+           Agent *curr = agents[i];
+           curr->act(*this);
+       }
+       size = agents.size();
+   }
+
 }
+
+
 
 void Session::addAgent(const Agent &agent) {
     Agent *tmp = agent.clone();
@@ -47,9 +56,10 @@ Graph Session::getGraphRef() const {
 }
 
 int Session::dequeueInfected() {
-    int temp = queue.front()->getNode();
+    /*int temp = queue.front()->getNode();
     queue.erase(queue.begin());
     return temp;
+     */
 }
 
 TreeType Session::getTreeType() const { //problem with getting treetype we get the index of the enum list
@@ -83,5 +93,10 @@ Session::Session(const Session &session) : g(), treeType(session.getTreeType()),
 
 Session::~Session() {
     g.Clear();
-//destructor for agents
+    infected_queue.clear();
+//add destructor for agents
+}
+
+std::vector<int> Session::get_queue() const {
+    return infected_queue;
 }
