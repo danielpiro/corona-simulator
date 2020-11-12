@@ -41,7 +41,6 @@ public:
 
     Session(const Session &session);
     std::vector<int> get_queue() const;
-//liel
 
 private:
     Graph g;

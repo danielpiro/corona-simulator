@@ -18,7 +18,6 @@ public:
     Graph *clone() const;
     Tree *BFS(int rootLabel, const Session &session);
     std::vector<bool> get_health() const;
-//liel
 
 private:
     std::vector<std::vector<int>> edges;

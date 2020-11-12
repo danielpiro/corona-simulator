@@ -14,7 +14,7 @@ void Virus::act(Session &session) {
         tmp->get_health()[nodeInd] = true;
         session.get_queue().push_back(nodeInd);
     }
-    for (unsigned int i = 0; i < tmp->get_edges()[nodeInd].size();)
+    for (unsigned int i = 0; i < tmp->get_edges()[nodeInd].size();i++)
         if (tmp->get_edges()[nodeInd][i] == 1) {
             if (!tmp->isInfected(tmp->get_edges()[nodeInd][i])) {
                 session.getGraphRef().infectNode((int) i);
@@ -36,20 +36,18 @@ int Virus::getNode() const {
 }
 
 void ContactTracer::act(Session &session) {
-    if (session.get_queue().size() != 0) {
-        int toBFS = session.get_queue().front();
-        session.get_queue().erase(session.get_queue().begin());
+    int toBFS = session.dequeueInfected();
+    if (toBFS =! -1){
         Graph *tmp = session.getGraphRef().clone();
         Tree *bfs = tmp->BFS(toBFS, session);
         int toDisconnect = bfs->traceTree();
         if (toDisconnect != toBFS) {
-            session.getGraphRef().remove_edges(toDisconnect);
-            tmp->Clear();
-            bfs->Clear();
-        }
+        session.getGraphRef().remove_edges(toDisconnect);
+        tmp->Clear();
+        bfs->Clear();
+    }
     }
 }
-//liel
 
 ContactTracer::ContactTracer(int noteInd) : nodeInd(noteInd) {
 }

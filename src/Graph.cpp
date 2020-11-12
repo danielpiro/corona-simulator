@@ -26,7 +26,6 @@ void Graph::Clear() {
 
 void Graph::infectNode(int nodeInd) {
     visited[nodeInd] = true;
-    //this->infected.push_back(nodeInd);
 }
 
 bool Graph::isInfected(int nodeInd) {
@@ -38,7 +37,6 @@ bool Graph::isInfected(int nodeInd) {
     return false;
      */
 }
-//liel
 
 std::vector<bool> Graph::get_visited() const {
     return visited;
