@@ -29,6 +29,7 @@ void Session::simulate() {
        size = agents.size();
        for (int i = 0; i < size; i++) {
            Agent *curr = agents[i];
+           enqueueInfected(i);
            curr->act(*this);
        }
        cycle++;

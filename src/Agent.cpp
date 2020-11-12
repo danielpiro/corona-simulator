@@ -10,10 +10,6 @@ Virus::Virus(const int nodeInd) : nodeInd(nodeInd) {
 
 void Virus::act(Session &session) {
     Graph *tmp = session.getGraphRef().clone();
-    if (!tmp->get_health()[nodeInd]) {
-        tmp->get_health()[nodeInd] = true;
-        session.get_queue().push_back(nodeInd);
-    }
     for (unsigned int i = 0; i < tmp->get_edges()[nodeInd].size();i++)
         if (tmp->get_edges()[nodeInd][i] == 1) {
             if (!tmp->isInfected(tmp->get_edges()[nodeInd][i])) {
