@@ -1,35 +1,46 @@
 #include "../include/Session.h"
 #include <iostream>
 #include <utility>
+#include <include/Graph.h>
+
 #include "list"
 
 using namespace std;
 
-Graph::Graph(std::vector<std::vector<int>> matrix) {
+Graph::Graph(std::vector<std::vector<int>> matrix, std::vector<bool>visit, std::vector<bool> h) {
     edges = std::move(matrix);
+    visited = std::move(visit);
+    health = h;
 }
 
 Graph::Graph() {}
 
+Graph::Graph(std::vector<std::vector<int>> matrix): visited(), health() {
+    edges = std::move(matrix);
+}
+
 void Graph::Clear() {
     edges.clear();
-    infected.clear();
+    visited.clear();
 }
 
 void Graph::infectNode(int nodeInd) {
-    this->infected.push_back(nodeInd);
+    visited[nodeInd] = true;
+    //this->infected.push_back(nodeInd);
 }
 
 bool Graph::isInfected(int nodeInd) {
-    for (unsigned int i = 0; i < infected.size(); ++i) {
+    return visited[nodeInd];
+    /*for (unsigned int i = 0; i < infected.size(); ++i) {
         if (infected[i] == nodeInd)
             return true;
     }
     return false;
+     */
 }
 
-std::vector<int> Graph::get_infected() const {
-    return infected;
+std::vector<bool> Graph::get_visited() const {
+    return visited;
 }
 
 std::vector<std::vector<int>> Graph::get_edges() const {
@@ -45,10 +56,11 @@ void Graph::remove_edges(int node) {
 }
 
 Graph *Graph::clone() const {
-    auto *clone = new Graph();
+   /* auto *clone = new Graph();
     clone->edges = this->get_edges();
     clone->infected = this->infected;
     return clone;
+    */
 }
 
 Tree *Graph::BFS(int rootLabel, const Session &session) {
@@ -72,4 +84,8 @@ Tree *Graph::BFS(int rootLabel, const Session &session) {
         }
     }
     return curr_Tree;
+}
+
+std::vector<bool> Graph::get_health() const {
+    return health;
 }

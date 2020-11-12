@@ -40,13 +40,14 @@ public:
     int getCycle() const;
 
     Session(const Session &session);
+    std::vector<int> get_queue() const;
 
 private:
     Graph g;
     TreeType treeType;
     std::vector<Agent *> agents;
     int cycle;
-    std::vector<Agent *> queue;
+    std::vector<int> infected_queue;
 
 
 };
