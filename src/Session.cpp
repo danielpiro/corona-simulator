@@ -23,7 +23,7 @@ Session::Session(const std::string &path) : g() {
    setTreeType(Json["tree"].get<string>().front()); //parser tree
    setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
 }
-
+//liel
 void Session::simulate() {
    int size = agents.size();
    for (int i = 0; i < size ; i++) {

@@ -38,6 +38,7 @@ bool Graph::isInfected(int nodeInd) {
     return false;
      */
 }
+//liel
 
 std::vector<bool> Graph::get_visited() const {
     return visited;
