@@ -4,9 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/spl_assignment.dir/src/Session.cpp.obj"
   "CMakeFiles/spl_assignment.dir/src/Tree.cpp.obj"
   "CMakeFiles/spl_assignment.dir/src/main.cpp.obj"
+  "libspl_assignment.dll.a"
   "spl_assignment.exe"
   "spl_assignment.exe.manifest"
-  "spl_assignment.lib"
   "spl_assignment.pdb"
 )
 

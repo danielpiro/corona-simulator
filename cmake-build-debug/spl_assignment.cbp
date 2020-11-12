@@ -4,117 +4,115 @@
 	<Project>
 		<Option title="spl_assignment"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="msvc8"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug"/>
+				<Option working_dir="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="spl_assignment">
-				<Option output="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug/spl_assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug"/>
+				<Option output="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/spl_assignment.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="msvc8"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Dell/Desktop/corona-simulator/."/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+					<Add directory="C:/Users/daniel/Desktop/Projects/corona-simulator/."/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 spl_assignment"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 spl_assignment"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="spl_assignment/fast">
-				<Option output="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug/spl_assignment.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug"/>
+				<Option output="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/spl_assignment.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="msvc8"/>
+				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/Dell/Desktop/corona-simulator/."/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+					<Add directory="C:/Users/daniel/Desktop/Projects/corona-simulator/."/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/mingw64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 spl_assignment/fast"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 spl_assignment/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug"/>
+				<Option working_dir="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Dell/Desktop/corona-simulator/cmake-build-debug"/>
+				<Option working_dir="C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Dell\Desktop\corona-simulator\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/mingw64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/daniel/Desktop/Projects/corona-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/include/Agent.h">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/include/Agent.h">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/include/Graph.h">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/include/Graph.h">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/include/Session.h">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/include/Session.h">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/include/Tree.h">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/include/Tree.h">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/include/json.hpp">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/include/json.hpp">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/src/Agent.cpp">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/src/Agent.cpp">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/src/Graph.cpp">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/src/Graph.cpp">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/src/Session.cpp">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/src/Session.cpp">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/src/Tree.cpp">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/src/Tree.cpp">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/src/main.cpp">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/src/main.cpp">
 			<Option target="spl_assignment"/>
 		</Unit>
-		<Unit filename="C:/Users/Dell/Desktop/corona-simulator/CMakeLists.txt">
+		<Unit filename="C:/Users/daniel/Desktop/Projects/corona-simulator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
