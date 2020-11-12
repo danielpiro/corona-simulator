@@ -23,20 +23,17 @@ Session::Session(const std::string &path) : g() {
    setTreeType(Json["tree"].get<string>().front()); //parser tree
    setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
 }
-//liel
 void Session::simulate() {
-   int size = agents.size();
-   for (int i = 0; i < size ; i++) {
-       if (size <= agents.size()){
+   int size = 0;
+   while (size < agents.size()) {
+       size = agents.size();
+       for (int i = 0; i < size; i++) {
            Agent *curr = agents[i];
            curr->act(*this);
        }
-       size = agents.size();
+       cycle++;
    }
-
 }
-
-
 
 void Session::addAgent(const Agent &agent) {
     Agent *tmp = agent.clone();
@@ -49,6 +46,10 @@ void Session::setGraph(const Graph &graph) { //need to create = operator in grap
 
 void Session::enqueueInfected(int node) {
     g.infectNode(node);
+    if (!g.get_health()[node]) {
+        g.get_health()[node] = true;
+        infected_queue.push_back(node);
+    }
 }
 
 Graph Session::getGraphRef() const {
@@ -56,19 +57,16 @@ Graph Session::getGraphRef() const {
 }
 
 int Session::dequeueInfected() {
-    /*int temp = queue.front()->getNode();
-    queue.erase(queue.begin());
-    return temp;
-     */
+    if (!infected_queue.empty()) {
+        int toBFS = infected_queue.front();
+        infected_queue.erase(infected_queue.begin());
+        return toBFS;
+    }
+    return -1;
 }
 
 TreeType Session::getTreeType() const { //problem with getting treetype we get the index of the enum list
-    if (treeType == 0)
-        return Cycle;
-    else if(treeType == 1)
-        return MaxRank;
-    else
-        return Root;
+    return treeType;
 }
 
 void Session::setTreeType(char tree) {
