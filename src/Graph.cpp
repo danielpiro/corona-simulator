@@ -10,13 +10,14 @@ using namespace std;
 Graph::Graph(std::vector<std::vector<int>> matrix, std::vector<bool>visit, std::vector<bool> h) {
     edges = std::move(matrix);
     visited = std::move(visit);
-    health = h;
+    health = std::move(h);
 }
 
 Graph::Graph() {}
 
-Graph::Graph(std::vector<std::vector<int>> matrix): visited(), health() {
+Graph::Graph(std::vector<std::vector<int>> matrix): visited(matrix.size()), health(matrix.size()) {
     edges = std::move(matrix);
+
 }
 
 void Graph::Clear() {
@@ -26,19 +27,14 @@ void Graph::Clear() {
 
 void Graph::infectNode(int nodeInd) {
     visited[nodeInd] = true;
+
 }
 
 bool Graph::isInfected(int nodeInd) {
     return visited[nodeInd];
-    /*for (unsigned int i = 0; i < infected.size(); ++i) {
-        if (infected[i] == nodeInd)
-            return true;
-    }
-    return false;
-     */
 }
 
-std::vector<bool> Graph::get_visited() const {
+vector<bool>& Graph::get_visited() {
     return visited;
 }
 
@@ -55,30 +51,32 @@ void Graph::remove_edges(int node) {
 }
 
 Graph *Graph::clone() const {
-   /* auto *clone = new Graph();
-    clone->edges = this->get_edges();
-    clone->infected = this->infected;
+
+   auto *clone = new Graph();
+    clone->edges = this->edges;
+    clone->health = this->health;
+    clone->visited = this->visited;
     return clone;
-    */
+
 }
 
 Tree *Graph::BFS(int rootLabel, const Session &session) {
     Tree *curr_Tree = Tree::createTree(session, rootLabel);
-    vector<bool> visited(edges.size(), false);
+    vector<bool> visit(edges.size(), false);
     vector<int> q;
     unsigned int vis;
     q.push_back(rootLabel);
-    visited[rootLabel] = true;
+    visit[rootLabel] = true;
     while (!q.empty()) {
         vis = q[0];
         q.erase(q.begin());
         for (unsigned int i = 0; i < edges.size(); i++) {
-            if (edges[vis][i] == 1 && (!visited[i])) {
+            if (edges[vis][i] == 1 && (!visit[i])) {
                 q.push_back(i);
-                visited[i] = true;
+                visit[i] = true;
                 Tree *temp = Tree::createTree(session, (int)i);
                 curr_Tree->addChild(*temp);
-                temp->Clear();
+                //temp->Clear();
             }
         }
     }

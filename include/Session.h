@@ -27,7 +27,7 @@ public:
 
     void setGraph(const Graph &graph);
 
-    Graph getGraphRef() const;
+Graph& getGraphRef();
 
     void enqueueInfected(int node);
 
@@ -41,7 +41,6 @@ public:
 
     Session(const Session &session);
     std::vector<int> get_queue() const;
-
 private:
     Graph g;
     TreeType treeType;

@@ -9,10 +9,11 @@ public:
     Graph(std::vector<std::vector<int>> matrix, std::vector<bool> visit, std::vector<bool> h);
     Graph(std::vector<std::vector<int>> matrix);
     Graph();
-    std::vector<bool> get_visited() const;
+    std::vector<bool>& get_visited();
     void infectNode(int nodeInd);
     bool isInfected(int nodeInd);
-    void Clear();
+
+    [[noreturn]] void Clear();
     std::vector<std::vector<int>> get_edges() const;
     void remove_edges(int node);
     Graph *clone() const;

@@ -7,12 +7,12 @@
 using namespace std;
 using json = nlohmann::json;
 
-Session::Session(const std::string &path) : g() {
+Session::Session(const std::string &path) : g() , cycle(0) {
     json Json;
     ifstream i(path);
     i >> Json;
     for (auto element : Json["agents"]) {
-        if (element[0] == 'V') {
+        if (element[0] == "V") {
             Agent *agent = new Virus(element[1]);
             addAgent(*agent);
         } else {
@@ -23,17 +23,24 @@ Session::Session(const std::string &path) : g() {
    setTreeType(Json["tree"].get<string>().front()); //parser tree
    setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
 }
+/*
+ * the value in visited[1] wont save the changes.
+ *
+ */
 void Session::simulate() {
    int size = 0;
    while (size < agents.size()) {
        size = agents.size();
        for (int i = 0; i < size; i++) {
-           Agent *curr = agents[i];
-           enqueueInfected(i);
+           Agent* curr = agents[i];
            curr->act(*this);
        }
        cycle++;
    }
+   for(int i= 0 ;i<g.get_visited().size(); i++){
+       cout<<to_string(i) + " : " + to_string(g.get_visited()[i]);
+   }
+   cout<<""<<endl;
 }
 
 void Session::addAgent(const Agent &agent) {
@@ -41,21 +48,27 @@ void Session::addAgent(const Agent &agent) {
     agents.push_back(tmp);
 }
 
-void Session::setGraph(const Graph &graph) { //need to create = operator in graph
+void Session::setGraph(const Graph &graph) {
     g = graph;
 }
 
 void Session::enqueueInfected(int node) {
-    g.infectNode(node);
+    if (!g.isInfected(node))
+        g.infectNode(node);
     if (!g.get_health()[node]) {
         g.get_health()[node] = true;
         infected_queue.push_back(node);
     }
 }
 
-Graph Session::getGraphRef() const {
+Graph& Session::getGraphRef()
+{
     return g;
 }
+//
+//Graph Session::getGraphRef() const {
+//    return g;
+//}
 
 int Session::dequeueInfected() {
     if (!infected_queue.empty()) {
@@ -66,7 +79,7 @@ int Session::dequeueInfected() {
     return -1;
 }
 
-TreeType Session::getTreeType() const { //problem with getting treetype we get the index of the enum list
+TreeType Session::getTreeType() const {
     return treeType;
 }
 
@@ -92,7 +105,6 @@ Session::Session(const Session &session) : g(), treeType(session.getTreeType()),
 
 Session::~Session() {
     g.Clear();
-    infected_queue.clear();
 //add destructor for agents
 }
 

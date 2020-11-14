@@ -1,4 +1,6 @@
 #include <iostream>
+#include <include/Agent.h>
+
 #include "../include/Session.h"
 
 using namespace std;
@@ -9,22 +11,22 @@ Virus::Virus(const int nodeInd) : nodeInd(nodeInd) {
 }
 
 void Virus::act(Session &session) {
-    Graph *tmp = session.getGraphRef().clone();
-    for (unsigned int i = 0; i < tmp->get_edges()[nodeInd].size();i++)
-        if (tmp->get_edges()[nodeInd][i] == 1) {
-            if (!tmp->isInfected(tmp->get_edges()[nodeInd][i])) {
-                session.getGraphRef().infectNode((int) i);
+    session.enqueueInfected(this->getNode());
+    Graph tmp = session.getGraphRef();
+    for (unsigned int i = 0; i < session.getGraphRef().get_edges()[nodeInd].size();i++)
+        if (session.getGraphRef().get_edges()[nodeInd][i] == 1) {
+            if (!tmp.isInfected(session.getGraphRef().get_edges()[nodeInd][i])) {
+                tmp.infectNode((int) i);
                 Agent *v = new Virus((int) i);
                 session.addAgent(*v);
                 break;
-                }
             }
-    tmp->Clear();
+        }
+    //tmp.Clear();
 }
 
 Agent *Virus::clone() const {
     return new Virus(*this);
-    cout<<"hello";
 }
 
 int Virus::getNode() const {
@@ -33,16 +35,17 @@ int Virus::getNode() const {
 
 void ContactTracer::act(Session &session) {
     int toBFS = session.dequeueInfected();
-    if (toBFS =! -1){
-        Graph *tmp = session.getGraphRef().clone();
-        Tree *bfs = tmp->BFS(toBFS, session);
+    if (toBFS != -1) {
+        Graph tmp = session.getGraphRef();
+        Tree *bfs = tmp.BFS(toBFS, session);
         int toDisconnect = bfs->traceTree();
         if (toDisconnect != toBFS) {
-        session.getGraphRef().remove_edges(toDisconnect);
-        tmp->Clear();
-        bfs->Clear();
-    }
-    }
+            tmp.remove_edges(toDisconnect);
+           // tmp->Clear();
+
+        }
+    }else
+        return;
 }
 
 ContactTracer::ContactTracer(int noteInd) : nodeInd(noteInd) {

@@ -7,7 +7,7 @@ class Agent {
 public:
     Agent();
 
-    virtual void act(Session &session) = 0;
+    virtual void act(Session &session)=0;
 
     virtual Agent *clone() const = 0;
     virtual int getNode() const = 0;
@@ -17,10 +17,10 @@ class ContactTracer : public Agent {
 public:
     ContactTracer(int noteInd);
 
-    Agent *clone() const override;
+    virtual Agent *clone() const;
 
-    void act(Session &session) override;
-    int getNode() const override;
+    virtual void act(Session &session);
+    virtual int getNode() const;
 
 private:
     const int nodeInd;
@@ -30,10 +30,10 @@ class Virus : public Agent {
 public:
     Virus(int nodeInd);
 
-    void act(Session &session) override;
+    virtual void act(Session &session);
 
-    Agent *clone() const override;
-    int getNode() const override;
+    virtual Agent *clone() const;
+    virtual int getNode() const;
 private:
     const int nodeInd;
 };
