@@ -7,16 +7,20 @@
 
 using namespace std;
 
-Graph::Graph(Graph& other) {
-    edges = std::move(other.edges);
-    visited = std::move(other.visited);
-    health = std::move(other.health);
+Graph::Graph(Graph& other){
+    edges = other.get_edges();
+    visited = other.get_visited();
+    health = other.get_health();
 }
 
 Graph::Graph() {}
 
 Graph::Graph(std::vector<std::vector<int>> matrix): visited(matrix.size()), health(matrix.size()) {
-    edges = std::move(matrix);
+    edges = matrix;
+    for (int i = 0; i < visited.size(); ++i) {
+        visited[i] = false;
+        health[i] = false;
+    }
 
 }
 
@@ -27,7 +31,8 @@ void Graph::Clear() {
 
 void Graph::infectNode(int nodeInd) {
     visited[nodeInd] = true;
-
+    return;
+    cout<<"visit"<<endl;
 }
 
 bool Graph::isInfected(int nodeInd) {
@@ -38,7 +43,7 @@ vector<bool>& Graph::get_visited() {
     return visited;
 }
 
-std::vector<std::vector<int>> Graph::get_edges() const {
+vector<vector<int>>& Graph::get_edges(){
     return edges;
 }
 
@@ -83,6 +88,6 @@ Tree *Graph::BFS(int rootLabel, const Session &session) {
     return curr_Tree;
 }
 
-std::vector<bool> Graph::get_health() const {
+vector<bool>& Graph::get_health() {
     return health;
 }

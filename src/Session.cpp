@@ -38,10 +38,11 @@ void Session::simulate() {
         }
         cycle++;
     }
-    for (int i = 0; i < g.get_visited().size(); i++) {
-        cout << to_string(i) + " : " + to_string(g.get_visited()[i]);
+    for (int i = 0; i < g.get_health().size(); ++i) {
+            if (g.get_health()[i])
+                cout<<to_string(i)<<endl;
     }
-    cout << "" << endl;
+
 }
 
 void Session::addAgent(const Agent &agent) {
@@ -62,7 +63,7 @@ void Session::enqueueInfected(int node) {
     }
 }
 
-Graph &Session::getGraphRef() {
+Graph& Session::getGraphRef() {
     return g;
 }
 //
@@ -107,7 +108,7 @@ Session::Session(Session &&other) : cycle(other.cycle), treeType(other.treeType)
     agents.swap(other.agents);
     infected_queue.swap(other.infected_queue);
     g = other.g;
-    other.clear();
+    //other.clear();
 }
 
 Session &Session::operator=(Session &&aSession) {
@@ -148,6 +149,6 @@ void Session::clear() {
     agents.clear();
 }
 
-std::vector<int> Session::get_queue() const {
+vector<int>& Session::get_queue(){
     return infected_queue;
 }

@@ -13,12 +13,12 @@ public:
     void infectNode(int nodeInd);
     bool isInfected(int nodeInd);
 
-    [[noreturn]] void Clear();
-    std::vector<std::vector<int>> get_edges() const;
+    void Clear();
+    std::vector<std::vector<int>>& get_edges();
     void remove_edges(int node);
     Graph *clone() const;
     Tree *BFS(int rootLabel, const Session &session);
-    std::vector<bool> get_health() const;
+    std::vector<bool>& get_health();
 
 private:
     std::vector<std::vector<int>> edges;

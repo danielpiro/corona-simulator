@@ -13,11 +13,11 @@ Virus::Virus(const int nodeInd) : nodeInd(nodeInd) {
 void Virus::act(Session &session) {
     session.enqueueInfected(this->getNode());
     Graph tmp = session.getGraphRef();
-    for (unsigned int i = 0; i < session.getGraphRef().get_edges()[nodeInd].size();i++)
-        if (session.getGraphRef().get_edges()[nodeInd][i] == 1) {
-            if (!tmp.isInfected(session.getGraphRef().get_edges()[nodeInd][i])) {
-                tmp.infectNode((int) i);
-                Agent *v = new Virus((int) i);
+    for (unsigned int i = 0; i < tmp.get_edges()[nodeInd].size();i++)
+        if (tmp.get_edges()[nodeInd][i] == 1) {
+            if (!tmp.isInfected((int)i)) {
+                tmp.infectNode((int)i);
+                Agent *v = new Virus((int)i);
                 session.addAgent(*v);
                 break;
             }
@@ -44,8 +44,8 @@ void ContactTracer::act(Session &session) {
            // tmp->Clear();
 
         }
-    }else
-        return;
+    }
+
 }
 
 ContactTracer::ContactTracer(int noteInd) : nodeInd(noteInd) {

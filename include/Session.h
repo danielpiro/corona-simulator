@@ -44,7 +44,7 @@ Graph& getGraphRef();
     int getCycle() const;
 
     Session(const Session &session);
-    std::vector<int> get_queue() const;
+    std::vector<int>& get_queue();
 private:
     Graph g;
     TreeType treeType;
