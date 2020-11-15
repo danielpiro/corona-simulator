@@ -6,7 +6,7 @@
 
 class Graph {
 public:
-    Graph(std::vector<std::vector<int>> matrix, std::vector<bool> visit, std::vector<bool> h);
+    Graph(Graph& other);
     Graph(std::vector<std::vector<int>> matrix);
     Graph();
     std::vector<bool>& get_visited();

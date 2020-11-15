@@ -7,7 +7,7 @@
 using namespace std;
 using json = nlohmann::json;
 
-Session::Session(const std::string &path) : g() , cycle(0) {
+Session::Session(const std::string &path) : g(), cycle(0) {
     json Json;
     ifstream i(path);
     i >> Json;
@@ -20,27 +20,28 @@ Session::Session(const std::string &path) : g() , cycle(0) {
             addAgent(*agent);
         }
     }
-   setTreeType(Json["tree"].get<string>().front()); //parser tree
-   setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
+    setTreeType(Json["tree"].get<string>().front()); //parser tree
+    setGraph(Json["graph"].get<vector<vector<int>>>()); //parser graph
 }
+
 /*
  * the value in visited[1] wont save the changes.
  *
  */
 void Session::simulate() {
-   int size = 0;
-   while (size < agents.size()) {
-       size = agents.size();
-       for (int i = 0; i < size; i++) {
-           Agent* curr = agents[i];
-           curr->act(*this);
-       }
-       cycle++;
-   }
-   for(int i= 0 ;i<g.get_visited().size(); i++){
-       cout<<to_string(i) + " : " + to_string(g.get_visited()[i]);
-   }
-   cout<<""<<endl;
+    int size = 0;
+    while (size < agents.size()) {
+        size = agents.size();
+        for (int i = 0; i < size; i++) {
+            Agent *curr = agents[i];
+            curr->act(*this);
+        }
+        cycle++;
+    }
+    for (int i = 0; i < g.get_visited().size(); i++) {
+        cout << to_string(i) + " : " + to_string(g.get_visited()[i]);
+    }
+    cout << "" << endl;
 }
 
 void Session::addAgent(const Agent &agent) {
@@ -61,8 +62,7 @@ void Session::enqueueInfected(int node) {
     }
 }
 
-Graph& Session::getGraphRef()
-{
+Graph &Session::getGraphRef() {
     return g;
 }
 //
@@ -103,9 +103,49 @@ Session::Session(const Session &session) : g(), treeType(session.getTreeType()),
     }
 }
 
+Session::Session(Session &&other) : cycle(other.cycle), treeType(other.treeType), g() {
+    agents.swap(other.agents);
+    infected_queue.swap(other.infected_queue);
+    g = other.g;
+    other.clear();
+}
+
+Session &Session::operator=(Session &&aSession) {
+    if (this != &aSession) {
+        clear();
+        cycle = aSession.cycle;
+        aSession.cycle = 0;
+        treeType = aSession.treeType;
+        agents.swap(aSession.agents);
+        infected_queue.swap(aSession.infected_queue);
+    }
+    return *this;
+}
+
+
 Session::~Session() {
-    g.Clear();
+    this->clear();
 //add destructor for agents
+}
+
+const Session &Session::operator=(const Session &aSession) {
+    if (this == &aSession) {
+        return *this;
+    }
+    clear();
+    cycle = aSession.cycle;
+    for (int i = 0; i < agents.size(); i++) {
+        agents.push_back(aSession.agents[i]);
+    }
+    return *this;
+}
+
+void Session::clear() {
+    g.Clear();
+    infected_queue.clear();
+    for (unsigned int i = 0; i < agents.size(); i++)
+        delete agents[i];
+    agents.clear();
 }
 
 std::vector<int> Session::get_queue() const {

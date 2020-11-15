@@ -18,6 +18,7 @@ enum TreeType {
 class Session {
 public:
     Session(const std::string &path);
+    Session(Session &&other);
 
     virtual ~Session();
 
@@ -28,6 +29,9 @@ public:
     void setGraph(const Graph &graph);
 
 Graph& getGraphRef();
+    void clear();
+    const Session &operator=(const Session &aSession);
+    Session &operator=(Session &&aSession);
 
     void enqueueInfected(int node);
 

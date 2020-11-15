@@ -7,10 +7,10 @@
 
 using namespace std;
 
-Graph::Graph(std::vector<std::vector<int>> matrix, std::vector<bool>visit, std::vector<bool> h) {
-    edges = std::move(matrix);
-    visited = std::move(visit);
-    health = std::move(h);
+Graph::Graph(Graph& other) {
+    edges = std::move(other.edges);
+    visited = std::move(other.visited);
+    health = std::move(other.health);
 }
 
 Graph::Graph() {}

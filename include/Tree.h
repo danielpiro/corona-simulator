@@ -37,9 +37,9 @@ class CycleTree : public Tree {
 public:
     CycleTree(int rootLabel, int currCycle);
 
-    int traceTree() override;
+    virtual int traceTree() ;
 
-    Tree *clone() const override;
+    virtual Tree *clone() const ;
 
 private:
     int currCycle;
@@ -49,18 +49,18 @@ class MaxRankTree : public Tree {
 public:
     MaxRankTree(int rootLabel);
 
-    int traceTree() override;
+    virtual int traceTree() ;
 
-    Tree *clone() const override;
+    virtual Tree *clone() const;
 };
 
 class RootTree : public Tree {
 public:
     RootTree(int rootLabel);
 
-    int traceTree() override;
+    virtual int traceTree() ;
 
-    Tree *clone() const override;
+    virtual Tree *clone() const;
 };
 
 #endif
