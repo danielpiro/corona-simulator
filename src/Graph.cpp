@@ -31,8 +31,6 @@ void Graph::Clear() {
 
 void Graph::infectNode(int nodeInd) {
     visited[nodeInd] = true;
-    return;
-    cout<<"visit"<<endl;
 }
 
 bool Graph::isInfected(int nodeInd) {
@@ -67,6 +65,7 @@ Graph *Graph::clone() const {
 
 Tree *Graph::BFS(int rootLabel, const Session &session) {
     Tree *curr_Tree = Tree::createTree(session, rootLabel);
+    Tree *bfs_tree= curr_Tree;
     vector<bool> visit(edges.size(), false);
     vector<int> q;
     unsigned int vis;
@@ -84,8 +83,10 @@ Tree *Graph::BFS(int rootLabel, const Session &session) {
                 //temp->Clear();
             }
         }
+        if (!q.empty())
+            curr_Tree=bfs_tree->getChildren(q.front());
     }
-    return curr_Tree;
+    return bfs_tree;
 }
 
 vector<bool>& Graph::get_health() {

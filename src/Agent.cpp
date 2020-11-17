@@ -15,8 +15,8 @@ void Virus::act(Session &session) {
     Graph tmp = session.getGraphRef();
     for (unsigned int i = 0; i < tmp.get_edges()[nodeInd].size();i++)
         if (tmp.get_edges()[nodeInd][i] == 1) {
-            if (!tmp.isInfected((int)i)) {
-                tmp.infectNode((int)i);
+            if (!session.getGraphRef().get_visited()[i]) {
+                session.getGraphRef().get_visited()[i] = true;
                 Agent *v = new Virus((int)i);
                 session.addAgent(*v);
                 break;
@@ -39,11 +39,8 @@ void ContactTracer::act(Session &session) {
         Graph tmp = session.getGraphRef();
         Tree *bfs = tmp.BFS(toBFS, session);
         int toDisconnect = bfs->traceTree();
-        if (toDisconnect != toBFS) {
-            tmp.remove_edges(toDisconnect);
-           // tmp->Clear();
-
-        }
+        if(toDisconnect!=-1)
+            session.getGraphRef().remove_edges(toDisconnect);
     }
 
 }

@@ -24,7 +24,9 @@ public:
 
     virtual int get_node();
 
-    std::vector<Tree *> getChildren() const;
+    std::vector<Tree *> getChildren();
+
+    Tree * getChildren(int label);
 
     virtual Tree *clone() const = 0;
 

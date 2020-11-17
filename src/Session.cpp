@@ -33,15 +33,15 @@ void Session::simulate() {
     while (size < agents.size()) {
         size = agents.size();
         for (int i = 0; i < size; i++) {
-            Agent *curr = agents[i];
-            curr->act(*this);
+            agents[i]->act(*this);
         }
         cycle++;
     }
-    for (int i = 0; i < g.get_health().size(); ++i) {
-            if (g.get_health()[i])
-                cout<<to_string(i)<<endl;
+    for (int j = 0; j < g.get_health().size(); ++j) {
+        if(g.get_health()[j])
+            cout<<j<<endl;
     }
+
 
 }
 

@@ -67,8 +67,18 @@ Tree *Tree::createTree(const Session &session, int rootLabel) {
     }
 }
 
-std::vector<Tree *> Tree::getChildren() const {
+std::vector<Tree *> Tree::getChildren() {
     return children;
+}
+
+Tree * Tree::getChildren(int label) {
+    if (this->get_node()==label)
+        return this;
+    for (int i=0;i<children.size();i++){
+        if(children[i]->getChildren(label)!= nullptr)
+            return children[i]->getChildren(label);
+    }
+    return nullptr;
 }
 
 Tree::~Tree() {
@@ -81,13 +91,15 @@ CycleTree::CycleTree(int rootLabel, int currCycle) : Tree(rootLabel), currCycle(
 
 
 int CycleTree::traceTree() {
-    vector<Tree *> temp = getChildren();
+    Tree* tmp = this;
+    int node = this->get_node();
     int cycle = currCycle;
-    while (cycle != 0 || !temp.empty()) {
-        temp = temp[0]->getChildren();
+    while (cycle > 0 && tmp->getChildren().size()!= 0) {
+        node = tmp->getChildren()[0]->get_node();
+        tmp = tmp->getChildren()[0];
         cycle--;
     }
-    return temp[0]->get_node();
+    return node;
 }
 
 Tree *CycleTree::clone() const {
@@ -99,7 +111,10 @@ MaxRankTree::MaxRankTree(int rootLabel) : Tree(rootLabel) {
 
 int MaxRankTree::traceTree() {
     vector<Tree *> temp = getChildren();
-    unsigned int max = temp[0]->getChildren().size(), ans = temp[0]->get_node(), index = 0;
+    int ans=-1;
+    if(!temp.empty()){
+    unsigned int max = temp[0]->getChildren().size() , index = 0;
+        ans = temp[0]->get_node();
     for (unsigned int i = 1; i < temp.size(); ++i) {
         if (temp[i]->getChildren().size() > max) {
             max = temp[i]->getChildren().size();
@@ -113,7 +128,8 @@ int MaxRankTree::traceTree() {
             }
         }
     }
-    return (int) ans;
+    }
+    return ans;
 }
 
 Tree *MaxRankTree::clone() const {
