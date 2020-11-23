@@ -6,24 +6,34 @@
 
 class Graph {
 public:
-    Graph(Graph& other);
-    Graph(std::vector<std::vector<int>> matrix);
     Graph();
-    std::vector<bool>& get_visited();
+
+    Graph(const std::vector<std::vector<int>> &matrix);
+
+    Graph(Graph &other);
+
     void infectNode(int nodeInd);
+
     bool isInfected(int nodeInd);
 
-    void Clear();
-    std::vector<std::vector<int>>& get_edges();
     void remove_edges(int node);
-    Graph *clone() const;
+
     Tree *BFS(int rootLabel, const Session &session);
-    std::vector<bool>& get_health();
+
+    Graph *clone() const;
+
+    void Clear();
+
+    std::vector<bool> &get_sick();
+
+    std::vector<bool> &get_visited();
+
+    std::vector<std::vector<int>> &get_edges();
 
 private:
     std::vector<std::vector<int>> edges;
     std::vector<bool> visited;
-    std::vector<bool> health;
+    std::vector<bool> sick;
 };
 
 #endif
